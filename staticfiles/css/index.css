@@ -1,0 +1,26 @@
+*{box-sizing:border-box !important;}
+
+header,main,footer{width:100%; height:auto;}
+
+body,h1,h2,h3,h4,h5,h6,p{margin:0 !important; padding:0 !important;}
+
+button,input{outline:none !important;}
+
+ul,li{list-style:none; margin:0; padding:0;}
+
+a{color:inherit !important; text-decoration:none !important;}
+
+
+/* MEDIA FOR ALL ELEMENTS */
+@media(max-width:1300px){}
+@media(max-width:1200px){}
+@media(max-width:998px){}
+@media(max-width:768px){}
+@media(max-width:568px){}
+@media(max-width:450px){}
+@media(max-width:320px){}
+/* MEDIA FOR CONTAINERS */
+@media(min-width:1300px){}
+@media(min-width:998px){}
+@media(min-width:768px){}
+@media(min-width:568px){}

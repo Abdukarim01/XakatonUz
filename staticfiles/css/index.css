@@ -6,11 +6,11 @@ body,h1,h2,h3,h4,h5,h6,p{margin:0 !important; padding:0 !important;}
 
 button,input{outline:none !important;}
 
-ul,li{list-style:none; margin:0; padding:0;}
+ul,li{margin:0; padding:0;}
 
 a{color:inherit !important; text-decoration:none !important;}
 
-.container_header{width:100%; margin-left: auto; margin-right:auto; padding:25px 15px;}
+.container_hackaton{width:100%; margin-left: auto; margin-right:auto; padding:25px 15px;}
 
 .header_bar{width:100%; height:60px; display:flex; flex-direction:row; flex-wrap:wrap; justify-content:space-between; align-items:center;}
 
@@ -18,7 +18,7 @@ a{color:inherit !important; text-decoration:none !important;}
 
 .bar_items ul{display:flex; flex-direction:row;flex-wrap:wrap;}
 
-.bar_items ul li{font-size:19.5px; font-weight:bold; padding:2px 23px; transition:all 0.4s;}
+.bar_items ul li{font-size:19.5px; font-weight:bold; padding:2px 23px; transition:all 0.4s; list-style:none;}
 
 .bar_items ul li:nth-child(1){padding-left:0;}
 
@@ -34,15 +34,81 @@ a{color:inherit !important; text-decoration:none !important;}
 
 .hackaton_description p{font-size:25px; font-weight:bold; letter-spacing:0.5px; }
 
+.main_items_title h1{font-weight:bold;}
+
+.organization{padding-top:30px;}
+
+.organization h3{font-weight:bold;}
+	
+.organization ul li{font-size:20px; margin-top:20px; list-style:none;}
+
+.organization ul li::before{content:"\2022"; color:#FFC100; }
+
+.organization ul li:nth-child(1){margin-top:40px;}
+
+.sign_up_btn{margin-top:100px; display:flex; justify-content: center;}
+
+.sign_up_btn a button {padding:8px 30px; border-radius:10px; background-color:#FFC100; border:none; box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.15);}
+
+.block_contents{max-width:550px; min-height:auto; display: flex; flex-direction:column;  margin: auto; background-color:#FFC100; padding:30px 40px; border-radius:15px; box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.15);}
+
+.block_contents h3 {font-weight:bold; text-align: center;}
+
+.block_contents ul li{list-style: none; margin-top:15px; font-size:17px;}
+
+.block_contents ul li:nth-child(1)::before{content:'1'; padding:2px 7px; border:1px solid black; border-radius:50%;}
+.block_contents ul li:nth-child(2)::before{content:'2'; padding:2px 7px; border:1px solid black; border-radius:50%;}
+.block_contents ul li:nth-child(3)::before{content:'3'; padding:2px 7px; border:1px solid black; border-radius:50%;}
+
+.questions_block{margin-top:70px;}
+
+.questions h2{font-weight:bold;}
+
+.drops_block{max-width:1050px; margin:50px auto 0px auto;}
+
+.drops_block ul a li{list-style:none; cursor:pointer;  border-top:3px solid #FFC100; padding:10px 20px 10px 10px; font-size:22px; font-weight:bold;}
+
+.down_icons{font-size:25px; float:right; clear: both; color:#FFC100;}
+
+.br{display:none;}
+
+.drops{height:0px; padding:0px 0px 0px 70px; overflow:hidden; transition:all 0.3s;}
+
+.drops li{border-bottom:1px solid black; font-weight:bold; font-size:20px; margin-bottom:20px;}
+
+.cards{max-width:380px; padding:30px 50px; text-align: center; margin:auto; background-color:#FFC100; border-radius:10px;box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.15);}
+
+.cards img{width:100%;}
+
+.footer{background-color:#333333; padding:60px 0px;}
+
+.foooer_navs{border-bottom:2px solid white; padding:0px 0px 50px 0px;}
+
+.f_items{margin-bottom:30px;}
+
+.f_items:nth-child(1) a h1{font-weight:bold;}
+
+.f_items:nth-child(1) div a svg{font-size:25px; margin-top:15px;}
+
+.f_items ul li:nth-child(1){font-weight:bold; font-size:22px; padding:0px 0px 10px 0px;}
+
+.f_items ul li{padding:5px 0px;  list-style:none; font-family:Tahoma; letter-spacing:1px; font-size:17px;}
 
 /* MEDIA FOR ALL ELEMENTS */
 @media(max-width:1300px){}
 
 @media(max-width:1200px){
-	.container_header{padding:10px 15px;}
+	.container_hackaton{padding:10px 15px;}
+	.container_main{padding:10px 15px;}
 	.bar_items ul li{padding:2px 15px;}
 	.hackaton_description p{font-size:20px; letter-spacing: 0;}
-	  }
+	.organization ul li:nth-child(1){margin-top:20px;}
+	.organization ul li{margin-top:10px; font-size:17px;}
+	.block_contents ul li{font-size:15px;}
+	.f_items:nth-child(1){display:flex; align-items: center; flex-direction:column;}
+	.f_items ul li:nth-child(1){font-size:20px;}
+	.f_items ul li{font-size:15px;}
+	}
 
 @media(max-width:992px){
 	.bar_items ul li{ padding:2px 10px; font-size:17px;}
@@ -52,6 +118,14 @@ a{color:inherit !important; text-decoration:none !important;}
 	.about_hackaton{padding:50px 0px 100px 0px;}
 	.hackaton_description{padding-top:20px;}
 	.hackaton_description p{font-size:17px; letter-spacing: 0;}
+	.organization ul li{margin-top:10px; font-size:12px;}
+	.organization{padding-top:20px;}
+	.sign_up_btn{margin-top:70px;}
+	.drops_block ul a li{font-size:18px;}
+	.down_icons{font-size:23px;}
+	.drops li{font-size:18px;}
+	.cards{padding:20px 40px;}
+	.footer{padding:40px 0px;}
 }
 
 @media (max-width:800px){
@@ -63,24 +137,50 @@ a{color:inherit !important; text-decoration:none !important;}
 	.bar_name{height:50px; width:100%; display:flex; align-items:center; justify-content:flex-start;}
 	.bar_items ul li:hover{padding:10px 15px; transition:all 0.4s;}
 	.click_bar{display:block;}
+	.drops_block ul a li{font-size:16px;}
 }
 
 @media(max-width:768px){
 	
 	.about_hackaton{padding:30px 0px 60px 0px;}
 	.whatis_hackaton h1{ font-size:33px; text-align: center;}
+	.main_items_title h1{font-size:33px; text-align: center;}
+	.organization h3{font-size:28px; text-align:center;}
 	.underline{position: inherit; max-width:150px; margin: auto;}
 	.hackaon_row{flex-flow:column-reverse;}
 	.hackaton_description{padding-top:0px; text-align: center;}
-
-}
+	.organization ul li{margin-top:20px; font-size:18px;}
+	.sign_up_btn{margin-top: 50px;}
+	.questions h2{text-align: center; font-size:25px;}
+	.drops_block ul a li{font-size:14px;}
+	.drops li{font-size:16px;}
+	.footer{padding:20px 0px;}
+	.foooer_navs{padding:0px 0px 20px 0px;}
+	.f_items{text-align: center;}
+	}
 
 @media(max-width:568px){
-	.container_header{padding:5px 15px;}
+	.container_hackaton{padding:5px 15px;}
 	.click_bar{top:8.5px;}
-	.whatis_hackaton h1{ font-size:27px; text-align: center;}
+	.whatis_hackaton h1{ font-size:25px;}
+	.main_items_title h1{font-size:25px;}
+	.organization h3{font-size:20px;}
 	.about_hackaton{padding:20px 0px 40px 0px;}
 	.hackaton_description p{font-size:15px;}
+	.organization ul li{font-size:14px; margin-top:15px;}
+	.sign_up_btn{margin-top:30px;}
+	.sign_up_btn a button {padding:5px 20px;}
+	.block_contents{padding:30px 20px;}
+	.block_contents ul li{font-size:13px;}
+	.block_contents h3{font-size:20px;}
+	.questions h2{font-size:21px;}
+	.br{display:block;}
+	.drops li{font-size:13px;}
+	.drops{padding:0px 0px 0px 40px;}
+	.cards{padding:15px;}
+	.cards img{width:90%;}
+	.f_items:nth-child(1) a h1{font-size:25px;}
+	.f_items ul li:last-child{text-decoration: 3px underline;}
 }
 
 @media(max-width:450px){}
@@ -90,21 +190,23 @@ a{color:inherit !important; text-decoration:none !important;}
 /* MEDIA FOR CONTAINERS */
 
 @media (min-width: 576px) {
-  .container_header{max-width:95%;}
+  .container_hackaton{max-width:95%;} 
 }
 
 @media (min-width: 768px) {
-  .container_header{max-width:900px; /*860*/}
+  .container_hackaton{max-width:900px; /*860*/}
+  
 }
 
 @media (min-width: 992px) {
-  .container_header{max-width:1120px;}
+  .container_hackaton{max-width:1120px;}
 }
 
 @media (min-width: 1200px) {
-  .container_header{max-width:1200px; }
+  .container_hackaton{max-width:1200px; }
 }
 
 @media (min-width: 1300px) {
-  .container_header{max-width:1380px;}
+  .container_hackaton{max-width:1380px;}
+
 }

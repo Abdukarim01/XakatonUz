@@ -255,7 +255,7 @@ a{color:inherit !important; text-decoration:none !important;}
 	.main_contents{padding:30px 0px;}
 	.m_select{flex:100%; max-width:100%;}
 	.m_select select{max-width:300px; display:block; margin: auto;}
-	.card_texts{min-height:250px;}
+	.card_texts{min-height:280px;}
 	.card_btns{margin-top:30px;}
 	.card_place_date{margin-top:30px;}
 	.card_thema p{font-weight:bolder; font-size:18px; }

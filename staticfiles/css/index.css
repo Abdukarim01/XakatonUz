@@ -142,8 +142,26 @@ a{color:inherit !important; text-decoration:none !important;}
 
 .card_btns button{display:block; margin: auto; font-weight: bolder; background-color:#ffc100; border:none; border-radius:10px; padding:10px 40px; box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.15);}
 
+.comp_block{padding:40px 0px 10px 0px;}
+
+.comp_text{font-weight:bolder; font-size:45px;}
+
+.comp_items{display: flex; flex-direction: column;justify-content:space-around; height:580px; padding:0px 0px 0px 40px;}
+
+.comp_items div p {font-size:20px; font-family:sans-serif; font-weight:bold; letter-spacing:0.5px;}
+
+.comp_items div a button{font-weight: bolder; background-color:#ffc100; border:none; border-radius:10px; padding:10px 40px; box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.15);}
+
+.m_bg_img{ box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.15); margin-top:20px; border-top-right-radius:20px; border-bottom-right-radius:20px;}
+
+.bg_linear{height:580px; background-image:linear-gradient(89.74deg, #FFFFFF 4.61%, rgba(255, 255, 255, 0.599443) 29.01%, rgba(255, 255, 255, 0.280431) 63.06%, rgba(255, 255, 255, 0) 99.79%), url(../../media/img/imgdesk.png); border-top-right-radius:20px; border-bottom-right-radius:20px;  background-size:cover; }
+
+
+
 /* MEDIA FOR ALL ELEMENTS */
-@media(max-width:1300px){}
+@media(max-width:1300px){
+	.comp_items,.bg_linear{height:530px;}
+}
 
 @media(max-width:1200px){
 	.container_hackaton{padding:10px 15px;}
@@ -159,6 +177,7 @@ a{color:inherit !important; text-decoration:none !important;}
 	.header_left{padding-top:50px;}
 	.header_left div a h1{font-size:70px;}
 	.header_left{justify-content:space-evenly;}
+	.comp_items,.bg_linear{height:500px;}
 	}
 
 @media(max-width:992px){
@@ -183,6 +202,12 @@ a{color:inherit !important; text-decoration:none !important;}
 	.header_items{padding:30px 0px 100px 0px;}
 	.m1_content_left a h1{font-size:40px;}
 	.m_select{flex:25%; max-width:25%;}
+	.m_bg_img{flex-direction:column-reverse;}	
+	.m_bg_img,.bg_linear{border-radius:20px;}
+	.pl_pr{padding:0px 10px;}
+	.bg_linear{background-image: linear-gradient(360deg, #FFFFFF 3.5%, rgba(255, 255, 255, 0.599443) 20.2%, rgba(255, 255, 255, 0.280431) 47.46%, rgba(255, 255, 255, 0) 100%), url(../../media/img/imgdesk.png);}
+	.comp_items{height: auto; padding:20px 15px; text-align:center; align-content:inherit;}
+	.comp_items div a button{margin-top:50px;}
 }
 
 @media (max-width:800px){
@@ -221,10 +246,13 @@ a{color:inherit !important; text-decoration:none !important;}
 	.hackathon_m_text a h1{display:block;}
 	.m1_content_right{display:block;}
 	.m1_content_left a h1{font-size:35px;}
-	.m_block_select{flex-wrap: wrap; height:0; border-bottom-left-radius:10px; border-bottom-right-radius:10px; transition: all 0.3s; margin-top:20px; overflow: hidden; padding: 0;}
+	.m_block_select{flex-wrap: wrap; height: 0; border-bottom-left-radius:10px; border-bottom-right-radius:10px; transition: all 0.3s; margin-top:20px; overflow: hidden; padding: 0;}
 	.m_select{flex:50%; max-width:50%;}	
 	.m_cards{max-width:400px; margin: auto;}
-
+	.m_bg_img{max-width:400px; margin: auto; margin-top:30px;}
+	.comp_text{font-size: 40px;}
+	.bg_linear{height:350px;}
+	.comp_items div p {font-size:15px;}
 	}
 
 @media(max-width:568px){
@@ -263,9 +291,17 @@ a{color:inherit !important; text-decoration:none !important;}
 	.card_place_date span{font-size:14px;}
 	.card_btns button{padding:7px 25px;}
 	.card_texts{padding:20px 10px 20px 10px;}
+	.comp_text{font-size:28px;}
+	.comp_items div p {font-size:13px;}
+	.comp_items div a button{padding:7px 25px; margin-top:20px;}
+	.comp_items{padding:20px 10px;}
+	.bg_linear{height:300px;}
+	.pl_pr{padding: 0;}
 }
 
-@media(max-width:450px){}
+@media(max-width:450px){
+	.bg_linear{height:75vw;}
+}
 
 @media(max-width:320px){}
 
@@ -292,6 +328,7 @@ a{color:inherit !important; text-decoration:none !important;}
   .container_hackaton{max-width:1380px;}
 
 }
+
 ::-webkit-scrollbar{width:5px;}
 ::-webkit-scrollbar-track {
   background:#fff ; 

@@ -77,7 +77,7 @@ function myFunction(y) {
 	if (num3 >= 2) {num3 = 0}
 
 	if (num3 == 1) {
-		document.querySelector('.m_block_select').style = "height:auto; padding:0px 0px 20px 0px; border-bottom:2px solid black; transition:all 0.4s;"
+		document.querySelector('.m_block_select').style = "height:300px; transition:all 0.4s;"
 	}
 	else{
 		document.querySelector('.m_block_select').style = "height:0px;  transition:all 0.5s;"

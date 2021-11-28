@@ -22,9 +22,9 @@ a{color:inherit !important; text-decoration:none !important;}
 
 .bar_items ul li:nth-child(1){padding-left:0;}
 
-.click_bar{position: absolute; padding-top:5px;  right:30px; top:15px; text-align: center; font-size:25px; display:none; cursor:pointer;}
+.click_bar{position: absolute; padding-top:5px; z-index: 10 !important; right:30px; top:15px; text-align: center; font-size:25px; display:none; cursor:pointer;}
 
-.about_hackaton{padding:80px 0px 150px 0px;}
+.about_hackaton{padding:40px 0px 150px 0px;}
 
 .whatis_hackaton h1{font-weight:bold;}
 
@@ -156,13 +156,25 @@ a{color:inherit !important; text-decoration:none !important;}
 
 .bg_linear{height:580px; background-image:linear-gradient(89.74deg, #FFFFFF 4.61%, rgba(255, 255, 255, 0.599443) 29.01%, rgba(255, 255, 255, 0.280431) 63.06%, rgba(255, 255, 255, 0) 99.79%), url(../../media/img/imgdesk.png); border-top-right-radius:20px; border-bottom-right-radius:20px;  background-size:cover; }
 
-.g_img_text{float: right;}
+.slid_sign_in_rweek{display:flex; flex-direction:row; padding:40px 0px 70px 0px;}
 
-.girl_img{width:80% !important;}
+.rweek_left_items{flex:50%; max-width:50%; display:flex; flex-direction:column; justify-content:space-evenly;}
 
-.r_week_text{font-size:60px; font-weight:bolder; }
+.rweek_left_items div a h1{font-weight:bolder; font-size:70px; }
 
-.sign_in_page_header{background-color:#FAE8A0; height:auto;}
+.rweek_left_items div a button{border:none; background-color:#ffc100; padding:10px 40px; font-weight:bolder; border-radius:10px; box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.15);}
+
+.rweek_left_items div a p{font-weight:bolder; font-size:20px; max-width:500px; margin-top:20px !important;}
+
+.rweek_right_items{flex:50%; max-width:50%;}
+
+.user_profil{text-align:right;}
+
+.user_profil a img{max-width:60%;}
+
+.user_profil a h1{font-weight:bolder; font-size:45px; font-family:Tahoma ; }
+
+.mobile_text{text-align:center; margin-bottom:10px; font-family:Tahoma black; display: none; font-weight:bolder;}
 
 /* MEDIA FOR ALL ELEMENTS */
 @media(max-width:1300px){
@@ -184,7 +196,10 @@ a{color:inherit !important; text-decoration:none !important;}
 	.header_left div a h1{font-size:70px;}
 	.header_left{justify-content:space-evenly;}
 	.comp_items,.bg_linear{height:500px;}
-	
+	.user_profil a img{max-width:70%;}
+	.user_profil a h1{font-size:35px;}
+  .rweek_left_items div a h1{font-size:60px; }
+  .rweek_left_items div a p{ font-size:18px; width: 100%;}
 	}
 
 @media(max-width:992px){
@@ -215,8 +230,10 @@ a{color:inherit !important; text-decoration:none !important;}
 	.bg_linear{background-image: linear-gradient(360deg, #FFFFFF 3.5%, rgba(255, 255, 255, 0.599443) 20.2%, rgba(255, 255, 255, 0.280431) 47.46%, rgba(255, 255, 255, 0) 100%), url(../../media/img/imgdesk.png);}
 	.comp_items{height: auto; padding:20px 15px; text-align:center; align-content:inherit;}
 	.comp_items div a button{margin-top:50px;}
-	.r_week_text{font-size:50px;}
-	.sign_in_page_header{height:100vh;}
+	.user_profil a img{max-width:80%;}
+	.rweek_left_items div a h1{font-size:50px;}
+  .rweek_left_items div a p{ font-size:16px;}
+
 }
 
 @media (max-width:800px){
@@ -262,10 +279,14 @@ a{color:inherit !important; text-decoration:none !important;}
 	.comp_text{font-size: 40px;}
 	.bg_linear{height:350px;}
 	.comp_items div p {font-size:15px;}
-	.g_img_text{float:inherit; text-align: center; width:100%;}
-	.girl_img{width:70% !important;}
-	.r_week_text{font-size:40px;}
-	.sign_in_page_header{height: auto;}
+	.user_profil a h1{display:none;}
+	.slid_sign_in_rweek{flex-direction:column-reverse;}
+	.rweek_left_items,.rweek_right_items{flex:100%; max-width:100%;}
+	.rweek_left_items div a h1{display: none;}
+	.mobile_text{display: block;}
+  .rweek_left_items div a p{text-align: center; min-width: 100%; font-size:15px;}
+  .rweek_left_items div a button{display:block; margin:30px auto 0px auto;}
+  .user_profil a img{display: block; margin: auto;}
 	}
 
 @media(max-width:568px){
@@ -310,6 +331,8 @@ a{color:inherit !important; text-decoration:none !important;}
 	.comp_items{padding:20px 10px;}
 	.bg_linear{height:300px;}
 	.pl_pr{padding: 0;}
+	.rweek_left_items div a p{font-size:13px;}
+	.mobile_text h1{font-size:30px;}
 }
 
 @media(max-width:450px){

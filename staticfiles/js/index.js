@@ -65,35 +65,45 @@ drops.forEach((e)=>{
 	}
 })
 
-let click_settings = document.querySelector('.m1_content_right')
-let num3 = 0
+let modal_show_btn = document.querySelectorAll('.modal_show')
+modal_show_btn.forEach((b)=>{
+	b.onclick = function(){
+		document.querySelector('.modal_hackathon').style = "display:block; z-index:150;"
+		document.querySelector('.modal_bg').style = "display:block; z-index:1;"
+		document.querySelector('.modal_items').style = " transform: translateY(0%); opacity:1; transition:all 0.3s;"
+		document.body.style = "position:fixed;"
 
-click_settings.addEventListener('click',()=>{
-		
-function myFunction(y) {
-  if (y.matches) {
-    
-	num3 ++ 
-	if (num3 >= 2) {num3 = 0}
-
-	if (num3 == 1) {
-		document.querySelector('.m_block_select').style = "height:300px; transition:all 0.4s;"
 	}
-	else{
-		document.querySelector('.m_block_select').style = "height:0px;  transition:all 0.5s;"
-	}
-
- }
- else {
-    document.querySelector('.m_block_select').style = "height:auto; transition:all 0.5s;"
-    if (num3 == 1) {num3 = 1}
-}
-
-}
-
-var y = window.matchMedia("(max-width:768px)")
-myFunction(y)
-y.addListener(myFunction)
 })
 
+let modal_bg = document.querySelector('.modal_bg')
+modal_bg.onclick =  function() {
+	document.querySelector('.modal_items').style = "transform: translateY(-20%); opacity:0; transition:all 0.3s;"
+	document.querySelector('.modal_hackathon').style = "display:none; z-index:-5;"
+	document.querySelector('.modal_bg').style = "display:none; z-index:-5;"
+	document.body.style = "position:inerit;"
 
+}
+
+
+let modal_close_btn = document.querySelector('.close_modal')
+modal_close_btn.onclick =  function () {
+	document.querySelector('.modal_items').style = "transform: translateY(-20%); opacity:0; transition:all 0.3s;"
+	document.querySelector('.modal_hackathon').style = "display:none; z-index:-5;"
+	document.querySelector('.modal_bg').style = "display:none; z-index:-5;"
+	document.body.style = "position:inerit;"
+
+}
+let eye_num = 1
+document.querySelector('.click_eye').onclick = ()=>{
+	eye_num++
+	if(eye_num >= 2){
+		document.getElementById('eye').classList = "fa fa-eye"
+		document.querySelector('.input_password').type = "text"
+		eye_num = 0
+	}
+	else {
+		document.getElementById('eye').classList = "fa fa-eye-slash"
+		document.querySelector('.input_password').type = "password"
+	}
+}

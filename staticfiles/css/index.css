@@ -4,6 +4,8 @@ header,main,footer{width:100%; height:auto;}
 
 body,h1,h2,h3,h4,h5,h6,p{margin:0 !important; padding:0 !important;}
 
+body{width:100%;}
+
 button,input{outline:none !important;}
 
 ul,li{margin:0; padding:0;}
@@ -176,6 +178,40 @@ a{color:inherit !important; text-decoration:none !important;}
 
 .mobile_text{text-align:center; margin-bottom:10px; font-family:Tahoma black; display: none; font-weight:bolder;}
 
+.modal_hackathon{position:fixed; display: none; z-index:-5; display:block; width: 100%; height:100%;  top: 0; left:0;}
+
+.modal_bg{position: absolute;  left:0; top: 0;  display: none; background-color:black; width:100%; height:100%; opacity: 0.7;}
+
+.modal_container{max-width:100%; height: 100%; display:flex; justify-content: center; align-items: center; padding:10px 20px;}
+
+.modal_items{width:400px; z-index: 151; transform: translateY(-20%); opacity: 0;  max-height:500px; background-color:white; border-radius:15px; display:flex; flex-direction:column;}
+
+.modal_header,.modal_main{padding:20px 30px;}
+
+.modal_header a span{font-weight:bolder; font-family:Tahoma;}
+
+.modal_header a button{background:transparent; border-radius:5px; margin-top:-15px; color:gray; border: none;}
+
+.modal_header a button:focus{border:1px solid black; }
+
+.modal_main form div{margin-bottom:15px;}
+
+.input_email,.input_password{width:100%; height:35px; padding-right:30px; border:none; border-bottom:2px solid black;}
+
+.click_eye{margin-left:-35px; cursor: pointer; padding:2px 5px;}
+
+.submit_group span,.submit_group a span{color:#ffc100; font-size:13px;}
+
+.submit_group input[type="submit"]{width:100%; margin-top:20px; background-color:#ffc100; border:none; font-weight: bolder; border-radius:8px; padding:7px 0px; box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.15);}
+
+.form_icons{margin-top:40px;}	
+
+.form_icons span:nth-child(1){font-size:12px; font-weight:bolder; border:none; width:auto; margin: 0; text-align:left; line-height:inherit;}
+
+.form_icons span{ display: inline-block; border: 1px solid black;width:30px; border-radius:50%; text-align: center; line-height:30px; height:30px;}	
+
+.modal_footer{border-top:2px solid black; text-align:center; color:#ffc100; padding:12px 0px; font-size:17px;}
+
 /* MEDIA FOR ALL ELEMENTS */
 @media(max-width:1300px){
 	.comp_items,.bg_linear{height:530px;}
@@ -333,6 +369,7 @@ a{color:inherit !important; text-decoration:none !important;}
 	.pl_pr{padding: 0;}
 	.rweek_left_items div a p{font-size:13px;}
 	.mobile_text h1{font-size:30px;}
+	.modal_header,.modal_main{padding-bottom: 0;}
 }
 
 @media(max-width:450px){

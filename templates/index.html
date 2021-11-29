@@ -476,5 +476,37 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 	<script src="../staticfiles/js/index.js"></script>
+	<script type="text/javascript">
+					let click_settings = document.querySelector('.m1_content_right')
+						let num3 = 0
+
+						click_settings.onclick = function(){
+								
+						function myFunction(y) {
+						  if (y.matches) {
+						    
+							num3 ++ 
+							if (num3 >= 2) {num3 = 0}
+
+							if (num3 == 1) {
+								document.querySelector('.m_block_select').style = "height:300px; transition:all 0.4s;"
+							}
+							else{
+								document.querySelector('.m_block_select').style = "height:0px;  transition:all 0.5s;"
+							}
+
+						 }
+						 else {
+						    document.querySelector('.m_block_select').style = "height:auto; transition:all 0.5s;"
+						    if (num3 == 1) {num3 = 1}
+						}
+
+						}
+
+						var y = window.matchMedia("(max-width:768px)")
+						myFunction(y)
+						y.addListener(myFunction)
+						}
+				</script>
 </body>
 </html>

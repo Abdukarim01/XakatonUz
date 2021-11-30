@@ -1,8 +1,8 @@
-let click_bar = document.querySelector('.click_bar')
-
+let click_bar = document.querySelectorAll('.click_bar')
 let num = 0
-
-click_bar.addEventListener('click',()=>{
+click_bar.forEach((c)=>{
+c.onclick = ()=>{
+let index_of_bar = Array.prototype.indexOf.call(click_bar, c)
 function myFunction(x) {
   if (x.matches) {
     
@@ -10,15 +10,15 @@ function myFunction(x) {
 	if (num >= 2) {num = 0}
 
 	if (num == 1) {
-		document.querySelector('.header_bar').style = "height:323px;overflow:hidden; border-bottom:3px solid black; transition:all 0.4s;"
+		document.querySelectorAll('.header_bar')[index_of_bar].style = "height:323px;overflow:hidden; border-bottom:3px solid black; transition:all 0.4s;"
 	}
 	else{
-		document.querySelector('.header_bar').style = "height:50px; transition:all 0.5s;"
+		document.querySelectorAll('.header_bar')[index_of_bar].style = "height:50px; transition:all 0.5s;"
 	}
 
 
  }else {
-    document.querySelector('.header_bar').style = "height:60px; transition:all 0.5s;"
+    document.querySelectorAll('.header_bar')[index_of_bar].style = "height:60px; transition:all 0.5s;"
     if (num == 1) {num = 1}
 }
 
@@ -28,7 +28,9 @@ var x = window.matchMedia("(max-width:800px)")
 myFunction(x)
 x.addListener(myFunction)
 
+}
 })
+
 
 let drops = document.querySelectorAll('.drops_content')
 let drops_items = document.querySelectorAll('.drops')

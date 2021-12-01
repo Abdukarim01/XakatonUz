@@ -41,7 +41,7 @@ drops.forEach((e)=>{
 		let icons = document.querySelectorAll('.down_icons')
 		let index_drops = Array.prototype.indexOf.call(drops, e)
 
-		drops_items[index_drops].style = " height:100px; transition:all 0.3s;"
+		drops_items[index_drops].style = "height:auto; transition:all 0.3s;"
 		icons[index_drops].style = "transform:rotate(180deg); transition:all 0.3s;"
 
 		btnArr = Array.from(drops_items)
@@ -109,3 +109,33 @@ document.querySelector('.click_eye').onclick = ()=>{
 		document.querySelector('.input_password').type = "password"
 	}
 }
+
+let corousel_btn_left = document.querySelector('.carousel_left_btn');
+let carousel_btn_right = document.querySelector('.carousel_right_btn');
+let btn_num = 0
+let arr = ['#FAE8A0','#E2D7FB','white']
+let bar_header_bg = document.querySelector('.header_bar_bg')
+carousel_btn_right.onclick = function(){
+	btn_num++
+	if (btn_num >= 3) {
+		btn_num = 0
+	}
+	bar_header_bg.style = `background-color:${arr[btn_num]};`
+} 
+
+corousel_btn_left.onclick = function(){
+	btn_num--
+	if (btn_num <= -1) {
+		btn_num = 2
+	}
+	bar_header_bg.style = `background-color:${arr[btn_num]};`
+} 
+
+let carousel_li = document.querySelectorAll('.carousel_li')
+
+carousel_li.forEach((l)=>{
+l.onclick = function(){
+	let index_of_li = Array.prototype.indexOf.call(carousel_li, l)
+	bar_header_bg.style = `background-color:${arr[index_of_li]};`
+}
+})

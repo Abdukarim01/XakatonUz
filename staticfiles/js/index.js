@@ -100,13 +100,15 @@ let eye_num = 1
 document.querySelector('.click_eye').onclick = ()=>{
 	eye_num++
 	if(eye_num >= 2){
+
 		document.getElementById('eye').classList = "fa fa-eye"
-		document.querySelector('.input_password').type = "text"
+		
+		document.querySelector(".input_group").querySelectorAll('input')[1].type = "text"
 		eye_num = 0
 	}
 	else {
 		document.getElementById('eye').classList = "fa fa-eye-slash"
-		document.querySelector('.input_password').type = "password"
+		document.querySelector(".input_group").querySelectorAll('input')[1].type = "password"
 	}
 }
 

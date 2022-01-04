@@ -196,7 +196,9 @@ a{color:inherit !important; text-decoration:none !important;}
 
 .modal_main form div{margin-bottom:15px;}
 
-.input_email,.input_password{width:100%; height:35px; padding-right:30px; border:none; border-bottom:2px solid black;}
+.input_group input{width:100%; height:35px;  padding-right:30px; border:none; border-bottom:2px solid black;}
+
+.input_group input:first-child{margin-bottom: 10px;}
 
 .click_eye{margin-left:-35px; cursor: pointer; padding:2px 5px;}
 

@@ -71,7 +71,7 @@ let modal_show_btn = document.querySelectorAll('.modal_show')
 modal_show_btn.forEach((b)=>{
 	b.onclick = function(){
 		document.querySelector('.modal_hackathon').style = "display:block; z-index:150;"
-		document.querySelector('.modal_bg').style = "display:block; z-index:1;"
+		document.querySelector('.modal_bg').style = "display:block; z-index:10;"
 		document.querySelector('.modal_items').style = " transform: translateY(0%); opacity:1; transition:all 0.3s;"
 		document.body.style = "position:fixed;"
 
@@ -112,32 +112,4 @@ document.querySelector('.click_eye').onclick = ()=>{
 	}
 }
 
-let corousel_btn_left = document.querySelector('.carousel_left_btn');
-let carousel_btn_right = document.querySelector('.carousel_right_btn');
-let btn_num = 0
-let arr = ['#FAE8A0','#E2D7FB','white']
-let bar_header_bg = document.querySelector('.header_bar_bg')
-carousel_btn_right.onclick = function(){
-	btn_num++
-	if (btn_num >= 3) {
-		btn_num = 0
-	}
-	bar_header_bg.style = `background-color:${arr[btn_num]};`
-} 
 
-corousel_btn_left.onclick = function(){
-	btn_num--
-	if (btn_num <= -1) {
-		btn_num = 2
-	}
-	bar_header_bg.style = `background-color:${arr[btn_num]};`
-} 
-
-let carousel_li = document.querySelectorAll('.carousel_li')
-
-carousel_li.forEach((l)=>{
-l.onclick = function(){
-	let index_of_li = Array.prototype.indexOf.call(carousel_li, l)
-	bar_header_bg.style = `background-color:${arr[index_of_li]};`
-}
-})

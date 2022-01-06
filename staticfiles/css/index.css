@@ -262,6 +262,8 @@ a{color:inherit !important; text-decoration:none !important;}
 
 .share_icons a div:hover{color:aqua; transition:all 0.3s;}
 
+
+
 /* MEDIA FOR ALL ELEMENTS */
 @media(max-width:1300px){
 	.comp_items,.bg_linear{height:530px;}
